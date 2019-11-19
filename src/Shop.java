@@ -7,15 +7,18 @@ import java.util.Map;
 public class Shop {
 
     private List<Item> itemList = new ArrayList<>();
+    private Map<String, Integer> check = new HashMap<>();
 
     public void addToItemList(Item item) {
         itemList.add(item);
     }
 
-
+    public Map<String, Integer> getCheck() {
+        return check;
+    }
 
     public Map<String, Integer> formCheck(List<Integer> id) {
-        Map<String, Integer> check = new HashMap<>();
+
         int valueOfApple = 0;
         int valueOfPear = 0;
         int valueOfMelon = 0;
@@ -40,6 +43,8 @@ public class Shop {
         }
         return check;
     }
+
+
 
 }
 

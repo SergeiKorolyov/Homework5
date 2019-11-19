@@ -22,10 +22,13 @@ public class Main {
 
         List<Integer> id = new ArrayList<>();
         id.add(1);
-        id.add(2);
+        id.add(1);
         id.add(2);
         id.add(3);
-        id.add(1);
+        id.add(3);
         System.out.println(itemList.formCheck(id));
+
+        PayCheck payCheck = new PayCheck();
+        System.out.println(payCheck.payCheck(itemList.getCheck()));
     }
 }
