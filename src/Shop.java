@@ -1,4 +1,3 @@
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,14 +6,14 @@ import java.util.Map;
 public class Shop {
 
     private List<Item> itemList = new ArrayList<>();
-    private Map<String, Integer> check = new HashMap<>();
+    private Map<String, Integer> goodsList = new HashMap<>();
 
     public void addToItemList(Item item) {
         itemList.add(item);
     }
 
-    public Map<String, Integer> getCheck() {
-        return check;
+    public Map<String, Integer> getGoodsList() {
+        return goodsList;
     }
 
     public Map<String, Integer> formCheck(List<Integer> id) {
@@ -30,18 +29,18 @@ public class Shop {
         for (int i = 0; i < id.size(); i++) {
             if (a.getId() == id.get(i)){
                 valueOfApple++;
-                check.put(a.getName(), valueOfApple);
+                goodsList.put(a.getName(), valueOfApple);
             }
             if (p.getId() == id.get(i)){
                 valueOfPear++;
-               check.put(p.getName(), valueOfPear);
+               goodsList.put(p.getName(), valueOfPear);
             }
             if (m.getId() == id.get(i)){
                 valueOfMelon++;
-                check.put(m.getName(), valueOfMelon);
+                goodsList.put(m.getName(), valueOfMelon);
             }
         }
-        return check;
+        return goodsList;
     }
 
 

@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -29,6 +28,6 @@ public class Main {
         System.out.println(itemList.formCheck(id));
 
         PayCheck payCheck = new PayCheck();
-        System.out.println(payCheck.payCheck(itemList.getCheck()));
+        System.out.println(payCheck.getPayCheck(itemList.getGoodsList()));
     }
 }

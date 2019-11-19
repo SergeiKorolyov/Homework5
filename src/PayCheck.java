@@ -3,12 +3,12 @@ import java.util.Map;
 
 public class PayCheck {
 
-    private Map<Item, Integer> payCheck = new HashMap<>();
+    private Map<Item, Integer> getPayCheck = new HashMap<>();
 
 
 
-    public Map<String, Integer> payCheck(Map<String, Integer> formedCheck) {
-        Map<String, Integer> preCheck = new HashMap<>();
+    public Map<String, Integer> getPayCheck(Map<String, Integer> formedCheck) {
+        Map<String, Integer> total = new HashMap<>();
 
         int totalCostOfApple = 0;
         int totalCostOfPear = 0;
@@ -29,11 +29,11 @@ public class PayCheck {
                 totalCostOfMelon = p.getPrice() * formedCheck.get(p.getName());
             }
             int totalSum = totalCostOfApple + totalCostOfMelon + totalCostOfPear;
-            preCheck.put("Total", totalSum);
+            total.put("Total", totalSum);
 
-            preCheck.putAll(formedCheck);
+            total.putAll(formedCheck);
         }
-        return preCheck;
+        return total;
     }
 
 }
