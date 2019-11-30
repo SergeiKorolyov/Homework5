@@ -1,33 +1,27 @@
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
 
-        Apple apple = new Apple();
+        Apple apple = new Apple("Apple", 1, 15);
 
-        Apple apple1 = new Apple();
+        Apple apple1 = new Apple("Apple", 2, 15);
 
-        Pear pear = new Pear();
+        Pear pear = new Pear("Pear", 3, 12);
 
-        Melon melon = new Melon();
-
-        Shop itemList = new Shop();
-        itemList.addToItemList(apple);
-        itemList.addToItemList(pear);
-        itemList.addToItemList(melon);
-        itemList.addToItemList(apple1);
-
-
-
-        List<Integer> id = new ArrayList<>();
-        id.add(1);
-        id.add(1);
-        id.add(2);
-        id.add(3);
-        id.add(3);
-        System.out.println(itemList.formCheck(id));
+        Melon melon = new Melon("Melon", 4, 20);
 
         PayCheck payCheck = new PayCheck();
-        System.out.println(payCheck.getPayCheck(itemList.getGoodsList()));
+        payCheck.addToGoods(apple);
+        payCheck.addToMapOfId(apple);
+
+        payCheck.addToGoods(apple1);
+        payCheck.addToMapOfId(apple1);
+
+        payCheck.addToGoods(pear);
+        payCheck.addToMapOfId(pear);
+
+        payCheck.addToGoods(melon);
+        payCheck.addToMapOfId(melon);
+
+
     }
 }

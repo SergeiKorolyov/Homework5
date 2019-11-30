@@ -3,6 +3,12 @@ public abstract class Item {
     private long id;
     private int price;
 
+    public Item(String name, long id, int price) {
+        this.name = name;
+        this.id = id;
+        this.price = price;
+    }
+
     public long getId() {
         return id;
     }

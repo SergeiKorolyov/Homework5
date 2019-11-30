@@ -1,40 +1,46 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-public class PayCheck {
+public class PayCheck extends Shop {
 
-    private Map<Item, Integer> getPayCheck = new HashMap<>();
+    private Map<Long, Item> mapOfId = new HashMap<>();
+    private Map<String, Integer> check = new HashMap<>();
+    private Map<Item, Integer> goods = new HashMap<>();
+    private List<Item> listOfProducts = new ArrayList<>();
 
-
-
-    public Map<String, Integer> getPayCheck(Map<String, Integer> formedCheck) {
-        Map<String, Integer> total = new HashMap<>();
-
-        int totalCostOfApple = 0;
-        int totalCostOfPear = 0;
-        int totalCostOfMelon = 0;
-
-        Apple a = new Apple();
-        Pear p = new Pear();
-        Melon m = new Melon();
-
-        for (int i = 0; i < formedCheck.size(); i++) {
-            if (a instanceof Apple) {
-                totalCostOfApple = a.getPrice() * formedCheck.get(a.getName());
-            }
-            if (p instanceof Pear) {
-                totalCostOfPear = p.getPrice() * formedCheck.get(p.getName());
-            }
-            if (m instanceof Melon) {
-                totalCostOfMelon = p.getPrice() * formedCheck.get(p.getName());
-            }
-            int totalSum = totalCostOfApple + totalCostOfMelon + totalCostOfPear;
-            total.put("Total", totalSum);
-
-            total.putAll(formedCheck);
-        }
-        return total;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PayCheck payCheck = (PayCheck) o;
+        return goods.equals(payCheck.goods) &&
+                listOfProducts.equals(payCheck.listOfProducts);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(goods, listOfProducts);
+    }
+
+    public void addToMapOfId(Item item) {
+        mapOfId.put(item.getId(), item);
+    }
+
+    public void addToGoods(Item item) {
+        int goodsCount = 0;
+        listOfProducts.add(item);
+        if (mapOfId.containsValue(item)) {
+            goodsCount++;
+        } else {
+            goodsCount = 1;
+        }
+        for (int i = 0; i < listOfProducts.size(); i++) {
+            goods.put(listOfProducts.get(i), goodsCount);
+        }
+    }
+
+    //public Map<String, Integer> formCheck() {
+
+   // }
 }
+
 

@@ -1,8 +1,6 @@
 public class Pear extends Item {
 
-    public Pear() {
-        this.setId(2);
-        this.setName("Pear");
-        this.setPrice(7);
+    public Pear(String name, long id, int price) {
+        super(name, id, price);
     }
 }
