@@ -47,7 +47,18 @@ public abstract class Item {
     }
 
     @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", price=" + price +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(name, id, price);
+
+
     }
 }
