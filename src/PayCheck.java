@@ -38,9 +38,9 @@ public class PayCheck extends Shop {
         }
     }
 
-    //public Map<String, Integer> formCheck() {
-
-   // }
+    public Map<Item, Integer> getPaycheck(){
+        return goods;
+    }
 }
 
 

@@ -8,6 +8,7 @@ public class Main {
         Pear pear = new Pear("Pear", 3, 12);
 
         Melon melon = new Melon("Melon", 4, 20);
+        Melon melon1 = new Melon("Melon", 4, 20);
 
         PayCheck payCheck = new PayCheck();
         payCheck.addToGoods(apple);
@@ -22,6 +23,9 @@ public class Main {
         payCheck.addToGoods(melon);
         payCheck.addToMapOfId(melon);
 
+        payCheck.addToGoods(melon1);
+        payCheck.addToMapOfId(melon1);
 
+        System.out.println(payCheck.getPaycheck());
     }
 }
