@@ -49,9 +49,9 @@ public abstract class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", price=" + price +
+                name +
+                ", id " + id +
+                ", price " + price +
                 '}';
     }
 

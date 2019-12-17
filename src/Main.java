@@ -5,27 +5,26 @@ public class Main {
 
         Apple apple1 = new Apple("Apple", 2, 15);
 
+        Apple apple2 = new Apple("Apple", 2, 15);
+
         Pear pear = new Pear("Pear", 3, 12);
 
         Melon melon = new Melon("Melon", 4, 20);
         Melon melon1 = new Melon("Melon", 4, 20);
 
         PayCheck payCheck = new PayCheck();
+        Shop shop = new Shop();
+
         payCheck.addToGoods(apple);
-        payCheck.addToMapOfId(apple);
 
         payCheck.addToGoods(apple1);
-        payCheck.addToMapOfId(apple1);
 
         payCheck.addToGoods(pear);
-        payCheck.addToMapOfId(pear);
 
         payCheck.addToGoods(melon);
-        payCheck.addToMapOfId(melon);
 
         payCheck.addToGoods(melon1);
-        payCheck.addToMapOfId(melon1);
 
-        System.out.println(payCheck.getPaycheck());
+        payCheck.getPaycheck();
     }
 }
