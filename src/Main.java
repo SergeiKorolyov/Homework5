@@ -12,19 +12,20 @@ public class Main {
         Melon melon = new Melon("Melon", 4, 20);
         Melon melon1 = new Melon("Melon", 4, 20);
 
-        PayCheck payCheck = new PayCheck();
+
         Shop shop = new Shop();
 
-        payCheck.addToGoods(apple);
+        shop.addProduct(apple);
+        shop.addProduct(apple1);
+        shop.addProduct(apple2);
+        shop.addProduct(pear);
+        shop.addProduct(melon);
+        shop.addProduct(melon1);
+        shop.formPayCheck(shop.formIdList());
 
-        payCheck.addToGoods(apple1);
 
-        payCheck.addToGoods(pear);
-
-        payCheck.addToGoods(melon);
-
-        payCheck.addToGoods(melon1);
-
-        payCheck.getPaycheck();
+        shop.printProducts();
+        shop.printId();
+        shop.printCheck();
     }
 }
