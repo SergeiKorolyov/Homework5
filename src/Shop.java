@@ -26,7 +26,8 @@ public class Shop {
                 counter++;
                 payCheck.put(listOfProducts.get(i).getName(), counter);
             }
-            if (0 < i && i < listOfProducts.size() - 1 && listOfProducts.get(i).getName() != listOfProducts.get(i + 1).getName()) {
+            if (0 < i && i < listOfProducts.size() - 1 &&
+                    listOfProducts.get(i).getName() != listOfProducts.get(i + 1).getName()) {
                 counter = 0;
             }
         }

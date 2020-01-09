@@ -23,9 +23,5 @@ public class Main {
         shop.addProduct(melon1);
         shop.formPayCheck(shop.formIdList());
 
-
-        shop.printProducts();
-        shop.printId();
-        shop.printCheck();
     }
 }
